@@ -1,8 +1,4 @@
 - name: Register RHN
   hosts: db1.rhpds.opentlc.com
-  tasks:
-     - name: List All repositories
-       redhat_repositories:
-         state: present
-         username: "{{ rhn_username }}"
-         password: "{{ rhn_password }}"         
+  command: subscription-manager register --username "{{ rh_username }}" --password "{{ rh_password }}"
+  command: subscription-manager list --avaialble
