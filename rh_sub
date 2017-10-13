@@ -1,0 +1,6 @@
+- redhat_subscription:
+    state: present
+    username: "{{ rhn_username }}"
+    password: "{{ rhn_password }}"
+    pool: '^Employee SKU$'
+  when: ansible_distribution == 'RedHat'
