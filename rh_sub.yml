@@ -5,5 +5,4 @@
        redhat_repositories:
          state: present
          username: "{{ rhn_username }}"
-         password: "{{ rhn_password }}"
-         list=all
+         password: "{{ rhn_password }}"         
